@@ -1,0 +1,22 @@
+name:                nvim-hs-test-plugins
+version:             0.2.0
+synopsis:            Test cases for nvim-hs
+-- description:
+license:             Apache-2.0
+license-file:        LICENSE
+author:              Sebastian Witte
+maintainer:          woozletoff@gmail.com
+-- copyright:
+-- category:
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable nvim-hs-test-plugins
+  main-is:             nvim.hs
+  -- other-modules:
+  other-extensions:    TemplateHaskell
+  build-depends:       base >=4.9 && <4.10
+                     , nvim-hs
+  hs-source-dirs:      .
+  default-language:    Haskell2010

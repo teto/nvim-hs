@@ -1,5 +1,5 @@
 function! s:RequireHaskellHost(name)
-	return jobstart(['stack', 'runghc', 'nvim.hs', '--', a:name.name, '-l', 'log.txt', '-v', 'DEBUG'], {'rpc': v:true, 'cwd': expand('%:p:h') })
+	return jobstart(['cabal', 'run', 'nvim.hs', '--', a:name.name, '-l', 'log.txt', '-v', 'DEBUG'], {'rpc': v:true, 'cwd': expand('%:p:h') })
 endfunction
 
 let nvimhs='nvimhs'

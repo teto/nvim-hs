@@ -34,8 +34,6 @@ script:
   - cabal clean
   - cabal configure --enable-tests
   - cabal test
-  - cd test-plugins
-  - nvim -u init.vim --headless
-  - cd ..
+  - cd test-plugins && nvim -u init.vim --headless ; cd ..
   - cabal check
   - cabal sdist
